@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/widget_frame"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/widget_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/widget_spacing"
+        android:layout_marginLeft="@dimen/widget_spacing"
+        android:layout_marginRight="@dimen/widget_spacing"
+        android:layout_marginTop="@dimen/widget_spacing"
+        android:background="@drawable/widget_background"
+        android:gravity="center_vertical"
+        android:padding="@dimen/widget_spacing" >
+
+        <ImageView
+            android:id="@+id/widget_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/plan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/widget_icon"
+            android:paddingLeft="@dimen/widget_spacing"
+            android:textColor="#FF8D8D8D"
+            android:textSize="@dimen/widget_large_text"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/plan_name"
+            android:paddingLeft="@dimen/widget_spacing"
+            android:textColor="#FF8D8D8D"
+            android:textSize="@dimen/widget_action_text"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/plan_name"
+            android:paddingRight="@dimen/widget_spacing" >
+
+            <RelativeLayout
+                android:id="@+id/calls_progress"
+                android:layout_width="fill_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/calls_usage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="12dp"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/calls_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calls_progress"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8D8D8D"
+                android:textSize="@dimen/widget_action_text" />
+
+            <TextView
+                android:id="@+id/calls_total"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calls_progress"
+                android:layout_toRightOf="@+id/calls_used"
+                android:gravity="right"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8D8D8D"
+                android:textSize="@dimen/widget_action_text" />
+
+            <RelativeLayout
+                android:id="@+id/texts_progress"
+                android:layout_width="fill_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/calls_total"
+                android:layout_marginTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/texts_usage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="12dp"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/texts_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texts_progress"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8D8D8D"
+                android:textSize="@dimen/widget_action_text" />
+
+            <TextView
+                android:id="@+id/texts_total"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texts_progress"
+                android:layout_toRightOf="@+id/texts_used"
+                android:gravity="right"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8D8D8D"
+                android:textSize="@dimen/widget_action_text" />
+
+            <RelativeLayout
+                android:id="@+id/data_progress"
+                android:layout_width="fill_parent"
+                android:layout_height="12dp"
+                android:layout_below="@+id/texts_total"
+                android:layout_marginTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/data_usage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="12dp"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/data_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/data_progress"
+                android:gravity="left"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8D8D8D"
+                android:textSize="@dimen/widget_action_text" />
+
+            <TextView
+                android:id="@+id/data_total"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/data_progress"
+                android:layout_toRightOf="@+id/data_used"
+                android:gravity="right"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8D8D8D"
+                android:textSize="@dimen/widget_action_text" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
